@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f8f9fa;
+            color: #343a40;
+        }
+
+        #contact {
+            margin-top: 20px;
+            padding: 20px;
+            background: #e9ecef;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        #contact a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #contact a:hover {
+            text-decoration: underline;
+        }
+
+        #discount {
+            background: #e9ecef;
+            padding: 20px;
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        #discount p {
+            margin: 10px 0;
+        }
+
+        #discount p strong {
+            color: #007bff;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Phone: +91 9335723334 (<a href="https://wa.link/k851st" target="_blank">WhatsApp</a>)</p>
+        <p>Phone: +91 690067118 (<a href="https://wa.link/shzwvg" target="_blank">WhatsApp</a>)</p>
+        <p>Email: <a href="mailto:varanasionlinecybercafe@gmail.com">varanasionlinecybercafe@gmail.com</a></p>
+    </section>
+
+    <section id="discount">
+        <h2>Try Now and Get Discount!</h2>
+        <p>सबसे किफायती दामों पर उपलब्ध।</p>
+        <p><strong id="counter">72</strong> Clients Served</p>
+        <p>Pay less than offline regular cyber cafes!</p>
+    </section>
+
+    <script>
+        // Auto-incrementing counter from 1 to 72
+        function startCounter() {
+            const counterElement = document.querySelector("#discount p strong");
+            let counter = 1;
+
+            setInterval(() => {
+                counterElement.textContent = counter;
+                counter = counter < 100 ? counter + 1 : 1; // Reset to 1 after 72
+            }, 100); // Adjust speed (100ms for faster animation)
+        }
+
+        // Start the counter animation once the page loads
+        document.addEventListener("DOMContentLoaded", () => {
+            startCounter();
+        });
+    </script>
+</body>
+</html>
