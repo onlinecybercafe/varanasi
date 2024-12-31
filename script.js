@@ -1,9 +1,4 @@
-// Redirect to WhatsApp link on clicking any <li> item in "Our Services"
-document.querySelectorAll("#services ul li").forEach((listItem) => {
-    listItem.addEventListener("click", () => {
-        window.location.href = "https://wa.link/shzwvg";
-    });
-});
+
 
 // Auto-incrementing counter from 1 to 72
 function startCounter() {
