@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting to Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .icon-container {
+            text-align: center;
+        }
+
+        .icon-container img {
+            width: 100px;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        .icon-container p {
+            margin-top: 10px;
+            font-size: 1.2em;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="icon-container">
+        <img src="https://png.pngtree.com/png-vector/20240520/ourmid/pngtree-blue-home-icon-or-button-for-webside-png-image_12500532.png" alt="Home Icon">
+        <p>Redirecting to Home...</p>
+    </div>
+    <script>
+        setTimeout(() => {
+            window.location.href = 'https://sites.google.com/view/varanasi-online-cyber-cafe/home';
+        }, 2000); // Redirect after 2 seconds
+    </script>
+</body>
+</html>
