@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting to Home</title>
+    <title>Client Work</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         /* General Reset */
@@ -15,47 +15,71 @@
 
         body {
             font-family: 'Poppins', Arial, sans-serif;
-            background-color: #f8f9fa;
+            line-height: 1.6;
+            background-color: #ff5900;
+            color: #24292d;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
         }
 
-        .icon-container {
+        .container {
             text-align: center;
+            padding: 20px;
+            border: 2px solid #0d0303;
+            border-radius: 8px;
+            background: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .icon-container img {
-            width: 100px;
-            animation: blink 1s infinite;
+        .container h1 {
+            color: #ff0000;
+            margin-bottom: 15px;
         }
 
-        @keyframes blink {
-            0%, 100% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0.5;
-            }
+        .container p {
+            margin-bottom: 20px;
+            font-size: 1.1em;
         }
 
-        .icon-container p {
-            margin-top: 10px;
-            font-size: 1.2em;
-            color: #007bff;
+        .container a {
+            display: inline-block;
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #ff0000;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .container a:hover {
+            background-color: #ffc400;
+            transform: scale(1.05);
         }
     </style>
 </head>
 <body>
-    <div class="icon-container">
-        <img src="https://png.pngtree.com/png-vector/20240520/ourmid/pngtree-blue-home-icon-or-button-for-webside-png-image_12500532.png" alt="Home Icon">
-        <p>Redirecting to Home...</p>
+    <div class="container">
+        <h1>Home Page</h1>
+        <p>Do you wanted to go back to the home page ?</p>
+        <a id="clientWorkLink" href="#">Click here</a>
     </div>
     <script>
-        setTimeout(() => {
-            window.location.href = 'https://sites.google.com/view/varanasi-online-cyber-cafe/home';
-        }, 2000); // Redirect after 2 seconds
+        document.getElementById('clientWorkLink').addEventListener('click', function(event) {
+            event.preventDefault();
+            const link = this.getAttribute('href');
+
+            setTimeout(() => {
+                window.open('https://sites.google.com/view/varanasi-online-cyber-cafe/home', '_blank');
+            }, 500); // Add a smooth delay before opening the new tab
+
+            this.textContent = 'All the Changes will be Lost...';
+            this.style.opacity = '0.7';
+        });
+
+        console.log('Home page loaded successfully.');
     </script>
 </body>
 </html>
